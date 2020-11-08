@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -7,8 +6,7 @@
     <meta name="description" content="WEB POS Dashboard">
     <meta name="author" content="Deshan Charuka">
     <meta name="generator" content="Jekyll v4.1.1">
-    <title>WEB POS Dashboard | Bootstrap</title>
-
+    <title>Customer Management | WEB POS</title>
 
     <!-- Bootstrap core CSS -->
     <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -46,7 +44,7 @@
             <div class="sidebar-sticky pt-3">
                 <ul class="nav flex-column">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">
+                        <a class="nav-link" href="index.html">
                             <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-house-door-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M6.5 10.995V14.5a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .146-.354l6-6a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 .146.354v7a.5.5 0 0 1-.5.5h-4a.5.5 0 0 1-.5-.5V11c0-.25-.25-.5-.5-.5H7c-.25 0-.5.25-.5.495z"/>
                                 <path fill-rule="evenodd" d="M13 2.5V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
@@ -55,7 +53,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="customer.html">
+                        <a class="nav-link active" href="#">
                             <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-person-lines-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm7 1.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm2 9a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5z"/>
                             </svg>
@@ -93,42 +91,83 @@
         </nav>
 
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
-            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                <h1 class="h2">Dashboard</h1>
+            <div class="d-flex justify-content-center flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                <h1 class="h2">Customer Management</h1>
             </div>
 
-            <div class="row justify-content-between">
-                <div class="col-12 col-md-4">
-                    <div class="d-flex align-items-center flex-row card text-white bg-primary mb-3" style="max-width: 18rem;">
-                        <div class="card-body">
-                            <h3 class="card-title">Customer </h3>
-                            <p class="card-text">Customers Count</p>
-                        </div>
-                        <div class="p-2"><h1>50+</h1></div>
-
+            <form>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="cusID">Customer ID</label>
+                        <input type="text" class="form-control" id="cusID">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="cusName">Customer Name</label>
+                        <input type="text" class="form-control" id="cusName">
                     </div>
                 </div>
-                <div class="col-12 col-md-4">
-                    <div class="d-flex align-items-center flex-row card text-white bg-info mb-3" style="max-width: 18rem;">
-                        <div class="card-body">
-                            <h3 class="card-title">Item </h3>
-                            <p class="card-text">Items Count</p>
-                        </div>
-                        <div class="p-2"><h1>50+</h1></div>
-
+                <div class="form-group">
+                    <label for="inputAddress">Address</label>
+                    <input type="text" class="form-control" id="inputAddress">
+                </div>
+                <div class="row align-items-end">
+                    <div class="form-group col-md-8">
+                        <label for="inputSalary">Salary</label>
+                        <input type="text" class="form-control" id="inputSalary">
+                    </div>
+                    <div class="form-group col-md-2">
+                        <button type="submit" class="btn btn-success">Add Customer</button>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <button type="submit" class="btn btn-warning">Update</button>
                     </div>
                 </div>
-                <div class="col-12 col-md-4">
-                    <div class="d-flex align-items-center flex-row card text-white bg-secondary mb-3" style="max-width: 18rem;">
-                        <div class="card-body">
-                            <h3 class="card-title">Order </h3>
-                            <p class="card-text">Orders Count</p>
-                        </div>
-                        <div class="p-2"><h1>50+</h1></div>
 
-                    </div>
-                </div>
-            </div>
+
+            </form>
+            <br>
+            <hr>
+            <br>
+
+<!-- Table ----------------------------------------------------------------------->
+            <table class="table table-borderless table-striped table-hover">
+                <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Customer Name</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Salary</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Deshan Charuka</td>
+                    <td>Kiribathgoda</td>
+                    <td>70,000</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Kushani Hansika</td>
+                    <td>Wanavasala</td>
+                    <td>80,000</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Saman</td>
+                    <td>Galle</td>
+                    <td>65,000</td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>Nilan</td>
+                    <td>Matara</td>
+                    <td>55,000</td>
+                </tr>
+
+                </tbody>
+            </table>
+
         </main>
     </div>
 </div>
@@ -136,3 +175,4 @@
 <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
